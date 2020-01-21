@@ -19,6 +19,12 @@ npm run build
 ```
 npm run lint
 ```
-
+- 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+### steps:
+- [create project: Install Vue CLI 3]
+- [electron: vue add electron-builder]
+- [vuetify: ]
+- [Electron+VueboilerPlate] (https://github.com/nklayman/vue-cli-plugin-electron-builder)

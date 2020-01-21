@@ -32,7 +32,7 @@ if (ENV === 'dev') {
 } else if (ENV === 'prod') {
   return prod()
 } else {
-  console.log('Acceptable --env is dev or prod ')
+  // console.log('Acceptable --env is dev or prod ')
   process.exit()
 }
 
@@ -60,7 +60,7 @@ function dev () {
       if (err) {
         throw err
       }
-      console.log(stdout)
+      // console.log(stdout)
     }
   )
   process.exit()
@@ -72,14 +72,14 @@ function prod () {
 
   const server = httpServer.createServer({ root: './dist' })
   server.listen(PORT, HOST, () => {
-    console.log(`HTTP Server started at port ${PORT}`)
+    // console.log(`HTTP Server started at port ${PORT}`)
 
     ngrok
       .connect(PORT)
       .then(res => {
         const URL = res
 
-        console.log(URL)
+        // console.log(URL)
 
         execFile(`${chromium.path}`, [
           '--args',
