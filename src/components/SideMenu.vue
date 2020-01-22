@@ -10,7 +10,7 @@
           link
         >
           <v-list-item-icon>
-            <v-icon>gavel</v-icon>
+            <v-icon>{{ item.icon }}</v-icon>
           </v-list-item-icon>
 
           <v-list-item-content>
