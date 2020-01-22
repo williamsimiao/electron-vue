@@ -1,18 +1,19 @@
 <template>
   <v-app>
+    <side-menu/>
     <AboutPage/>
   </v-app>
 </template>
 
 <script>
-// import HelloWorld from './components/HelloWorld';
 import AboutPage from './pages/AboutPages/AboutPage';
+import SideMenu from './components/SideMenu';
 
 export default {
   name: 'App',
 
   components: {
-    // HelloWorld,
+    SideMenu,
     AboutPage
   },
 
