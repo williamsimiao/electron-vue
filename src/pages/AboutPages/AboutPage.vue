@@ -15,7 +15,7 @@
       </v-list-item>
 
       <v-card-actions>
-        <v-btn text>Button</v-btn>
+        <v-btn text>{{ locale }}</v-btn>
         <v-btn text>Button</v-btn>
       </v-card-actions>
     </v-card>
@@ -27,6 +27,11 @@ export default {
   data () {
     return {
       pageName: 'About'
+    }
+  },
+  computed: {
+    locale () {
+      return this.$store.state.locale.locale
     }
   }
 }
