@@ -7,7 +7,7 @@
         <v-list-item
           v-for="item in items"
           :key="item.title"
-          link
+          :to="item.url"
         >
           <v-list-item-icon>
             <v-icon>{{ item.icon }}</v-icon>
@@ -32,10 +32,10 @@ export default {
         //   { title: this.$tc('About'), icon: 'gavel' }
         // ]
         items: [
-          { title: 'CSP', icon: 'account_box' },
-          { title: 'Client', icon: 'account_box' },
-          { title: 'Certificados', icon: 'gavel' },
-          { title: 'About', icon: 'gavel' }
+          { title: 'CSP', icon: 'account_box', url: 'csp' },
+          { title: 'Client', icon: 'account_box', url: 'client' },
+          { title: 'Certificados', icon: 'gavel', url: 'certificates' },
+          { title: 'About', icon: 'gavel', url: 'about' }
         ]
       }
     },
