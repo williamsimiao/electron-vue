@@ -1,8 +1,11 @@
 <template>
   <v-app>
     <side-menu/>
-    <router-view />
-    <!-- <AboutPage/> -->
+    <v-content>
+      <v-container class="fill-height" fluid>
+        <router-view />
+      </v-container>
+    </v-content>
   </v-app>
 </template>
 

@@ -32,10 +32,10 @@ export default {
         //   { title: this.$tc('About'), icon: 'gavel' }
         // ]
         items: [
-          { title: 'CSP', icon: 'account_box', url: 'csp' },
-          { title: 'Client', icon: 'account_box', url: 'client' },
-          { title: 'Certificados', icon: 'gavel', url: 'certificates' },
-          { title: 'About', icon: 'gavel', url: 'about' }
+          { title: 'CSP', icon: 'account_box', url: { name: 'csp' } },
+          { title: 'Client', icon: 'account_box', url: { name: 'client' } },
+          { title: 'Certificados', icon: 'gavel', url: { name: 'certificates' } },
+          { title: 'About', icon: 'gavel', url: { name: 'about' } }
         ]
       }
     },
