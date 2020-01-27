@@ -9,22 +9,22 @@ const router = new Router({
   linkExactActiveClass: 'active',
   routes: [
     {
-      path: '/',
+      path: '/csp',
       name: 'csp',
       component: () => import(/* webpackChunkName: "home" */ './pages/CSPPages/CSPPage')
     },
     {
-      path: '/',
+      path: '/certificates',
       name: 'certificates',
       component: () => import(/* webpackChunkName: "home" */ './pages/CertificatesPages/CertificatePage')
     },
     {
-      path: '/',
+      path: '/client',
       name: 'client',
       component: () => import(/* webpackChunkName: "home" */ './pages/ClientPages/ClientPage')
     },
     {
-      path: '/',
+      path: '/about',
       name: 'about',
       component: () => import(/* webpackChunkName: "home" */ './pages/AboutPages/AboutPage')
     },
