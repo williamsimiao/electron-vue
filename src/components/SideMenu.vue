@@ -25,12 +25,6 @@
 export default {
   data () {
       return {
-        // items: [
-        //   { title: this.$tc('CSP'), icon: 'account_box' },
-        //   { title: this.$tc('Client'), icon: 'account_box' },
-        //   { title: this.$tc('Certificados'), icon: 'gavel' },
-        //   { title: this.$tc('About'), icon: 'gavel' }
-        // ]
         items: [
           { title: 'CSP', icon: 'account_box', url: { name: 'csp' } },
           { title: 'Client', icon: 'account_box', url: { name: 'client' } },
