@@ -7,21 +7,15 @@ npm install
 
 ### Compiles and hot-reloads for development
 ```
-npm run serve
+npm run electron:serve
 ```
 
 ### Compiles and minifies for production
 ```
-npm run build
+npm run package-mac
+npm run package-linux
+npm run package-win
 ```
-
-### Lints and fixes files
-```
-npm run lint
-```
-- 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
 
 ### steps:
 - [create project: Install Vue CLI 3]
