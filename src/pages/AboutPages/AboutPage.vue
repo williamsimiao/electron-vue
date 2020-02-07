@@ -1,8 +1,6 @@
 <template>
   <div>
     <v-card
-      class="mx-auto"
-      max-width="344"
       outlined
     >
       <v-list-item three-line>
@@ -16,7 +14,7 @@
 
       <v-card-actions>
         <v-btn text>{{ locale }}</v-btn>
-        <v-btn text>Button</v-btn>
+        <v-btn text>{{ variavel }}</v-btn>
       </v-card-actions>
     </v-card>
   </div>
@@ -25,11 +23,13 @@
 <script>
 export default {
   created () {
-    this.callDinamoLib()
+    // this.callDinamoLib()
+    this.ffiTest()
   },
   data () {
     return {
-      pageName: 'About'
+      pageName: 'About',
+      variavel: 'texto'
     }
   },
   computed: {
@@ -38,6 +38,22 @@ export default {
     }
   },
   methods: {
+    ffiTest () {
+      var ffi = require('ffi');
+
+      var libm = ffi.Library('libm', {
+        'ceil': [ 'double', [ 'double' ] ]
+      });
+      var value = libm.ceil(1.5)
+      this.pageName = value
+
+      // You can also access just functions in the current process by passing a null
+      var current = ffi.Library(null, {
+        'atoi': [ 'int', [ 'string' ] ]
+      });
+      this.variavel = current.atoi('1234')
+
+    },
     callDinamoLib () {
       var ref = require('ref');
       var ffi = require('ffi');

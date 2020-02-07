@@ -1,31 +1,28 @@
 <template>
-  <div>
-    <v-card
-      class="mx-auto"
-      max-width="344"
-      outlined
-    >
-      <v-list-item three-line>
-        <v-list-item-content>
-          <div class="overline mb-4">OVERLINE</div>
-          <v-list-item-title class="headline mb-1">{{ pageName + ' Page' }}</v-list-item-title>
-          <v-list-item-subtitle>Greyhound divisely hello coldly fonwderfully</v-list-item-subtitle>
-        </v-list-item-content>
-
-      </v-list-item>
-
-      <v-card-actions>
-        <v-btn text>Button</v-btn>
-        <v-btn text>Button</v-btn>
-      </v-card-actions>
-    </v-card>
-  </div>
+  <v-container>
+    <v-row>
+      <v-col cols="auto">
+        <v-row
+          justify="start"
+        >
+          <v-text-field
+            v-model="certificate"
+            outlined
+            label="Certificado"
+            counter
+          >
+          </v-text-field>
+        </v-row>
+      </v-col>
+    </v-row>
+  </v-container>
 </template>
 
 <script>
 export default {
   data () {
     return {
+      certificate: 'The certificate',
       pageName: 'Certificate'
     }
   }

@@ -1,10 +1,14 @@
 <template>
   <v-app>
-    <side-menu/>
     <v-content>
-      <v-container class="fill-height" fluid>
-        <router-view />
-      </v-container>
+      <v-row>
+        <v-col cols="3">
+          <side-menu/>
+        </v-col>
+        <v-col cols="9">
+          <router-view />
+        </v-col>
+      </v-row>
     </v-content>
   </v-app>
 </template>
@@ -19,7 +23,7 @@ export default {
     SideMenu
   },
   created () {
-    this.$router.push({ name: 'csp'})
+    this.$router.push({ name: 'about'})
   },
   data: () => ({
     //
